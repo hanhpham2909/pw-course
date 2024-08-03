@@ -1,0 +1,175 @@
+# Lesson 3
+
+## Git
+
+### 1. Xem lịch sử commit 
+- `git log`
+
+### 2. Thay đổi commit message 
+- `git commit --amend`: sửa commit
+Step 1: Nhập lệnh `git commit --amend`
+Step 2: Gõ i -> vào chế độ insert
+Step 3: Gõ esc để thoát insert
+Step 4: Gõ “:wq” -> write and quit
+
+- `git commit --amend --message "new message"`: sửa commit với tin nhắn mới
+
+### 3. Thay đổi vùng 
+**Đưa từ vùng staging về working directory**
+`git restore --staged <file>`
+
+**Đưa từ vùng repository về working directory (uncommit)
+**
+`git reset HEAD~1 (undo 1 commit)`
+
+### 4. Branch
+- Tạo nhánh mới: `git branch branch-name`
+- Chuyển nhánh: `git checkout branch-name`
+- Tạo nhánh mới và chuyển nhánh: `	git checkout -b <ten_branch>`
+*Note: Luôn tạo branch mới trước khi thực hiện một lệnh copy từ internet*
+
+
+### 5. Gitignore
+*Dùng để bỏ qua các file không cần git theo dõi.*
+- Tạo file `.gitignore` 
+- Ignore file
+	<file_name>
+- Ignore folder
+	<folder-name>/
+- Ignore file after added
+	`git rm --cached <file_name>`
+
+### 2. Commit
+- `git commit --amend`: sửa commit
+- `git commit --amend --message "new message"`: sửa commit với tin nhắn mới
+- `git add .`: thêm tất cả các file vào staging area
+- `git reset`: undo commit
+- `git reset --hard HEAD`: undo commit và thay đổi trong working directory
+
+### 3. Branch
+- Tạo nhánh mới: `git branch branch-name`
+- Chuyển nhánh: `git checkout branch-name`
+- Hợp nhất nhánh: `git merge branch-name`
+- Xóa nhánh: `git branch -d branch-name`
+
+## JavaScript
+
+### 1. Conventions
+- kebab-case: đặt tên file
+- snake_case: đặt tên file
+- camelCaseMeAndYou: đặt tên biến
+- PascalCase: đặt tên class
+
+### 2. Console.log
+- Hàm `console.log(message)`
+**Example:**
+```console.log(‘Toi la Nga); 
+console.log(“Toi la Phong”);
+console.log(`${variable_name}`)
+let name = “Nga”;
+console.log(`Toi la ${name}`);
+console.log(“Toi ten la” + name + “”)```
+
+### 3. Object
+**Object = đối tượng, dùng để lưu trữ tập hợp các giá trị vào cùng một biến hoặc hằng số**
+*Khai báo:* 
+```let/const <ten_object> = {
+	  <thuoc_tinh>: <gia_tri>
+	  …
+	}```
+*Trong đó:*
+- *<thuoc_tinh>: giống quy tắc đặt tên biến*
+- *<gia tri>: có kiểu giống biến, hoặc là 1 object khác.*
+
+*Ví dụ:*
+```let  user = {“name”: “Alex”, “age”: 10, “email”: “alex@gmail.com”}
+const product = {
+  “name”: “Laptop”,
+  “price”: 500,
+  “isWindow”: true,
+  “manufacturer”: {
+    “name”: “Acer”,
+    “year”: 2024
+  }```
+*Sử dụng:* 
+```console.log("name = " + user.name);
+console.log("manufacturer name = " + product.manufacturer.name);
+console.log(“price = “, product[“price”]);```
+*Gán lại*
+```user.age = 28
+product[“manufacturer”][“year”] = 2025```
+
+### 4. Logical Operators
+- `&&`: cả 2 vế của mệnh đề đều đúng
+- `||`: một trong 2 vế đúng
+- `!`: đảo ngược lại giá trị của mệnh đề
+
+
+
+### 5. Array
+- Array: Mảng
+**Tạo mảng**
+```
+const students = [
+    "John",
+    "Peter",
+];
+console.log(students)  // ["John","Peter"]
+```
+***Truy xuất mảng***
+- Lấy phần tử theo index: [0], [1], [2]
+```
+const students = [
+    "John",
+    "Peter",
+];
+console.log(students[0])  // John
+
+```
+- Độ dài mảng: length
+```
+let letters = ["a", "b", "c"];
+console.log(letters.length); // 3
+```
+
+### 6. Function
+- Function = hàm là đoạn code được đặt tên và có thể tái sử dụng, thực hiện 1 nhiệm vụ hoặc 1 tính toán cụ thể.
+- Hàm tham số (parameter): Tham số (parameter - param) là những biến trong cặp () của function, đại diện cho những đối số được truyền vào trong hàm. Các param được coi như các biến cục bộ trong hàm, và bị hủy khi hàm thực hiện xong.
+
+- Hàm return value: Khi gặp lệnh return, hàm sẽ thoát và trả về giá trị nếu có. Các lệnh còn lại sẽ không được thực hiện (ngoại trừ một số trường hợp như finally block).
+```
+function test(a, b) {
+    console.log(a, b);  // a = 10, b = undefined
+}
+test(10);
+```
+
+function ABC() {
+    return 10;  // ABC() = 10
+    return;  // ABC() = undefined
+}
+```
+
+### 7. Phạm vi của biến, var và let
+- Global: *Biến toàn cục, khi một biến var được khai báo bên ngoài một function. Điều này có nghĩa là bất kỳ biến nào được khai báo bằng var bên ngoài một function thì có thể dùng được ở mọi nơi.*
+- Scope: {} *Block là một đoạn mã được giới hạn bởi {}. Một block nằm trong một dấu ngoặc nhọn. Bất kỳ thứ gì trong dấu ngoặc nhọn đều là một block.*
+-- let: block scope
+-- var: global scope
+
+## JavaScript Comparison Operators
+
+### 1. `==` (Equality)
+- So sánh giá trị của hai biến nhưng không so sánh kiểu dữ liệu.
+- Ví dụ: `5 == '5'` trả về `true` vì cả hai đều có giá trị là 5 dù kiểu dữ liệu khác nhau.
+
+### 2. `===` (Strict Equality)
+- So sánh cả giá trị và kiểu dữ liệu của hai biến.
+- Ví dụ: `5 === '5'` trả về `false` vì kiểu dữ liệu của chúng khác nhau (`number` và `string`).
+
+### 3. `!=` (Inequality)
+- So sánh giá trị của hai biến nhưng không so sánh kiểu dữ liệu.
+- Ví dụ: `5 != '5'` trả về `false` vì cả hai đều có giá trị là 5 dù kiểu dữ liệu khác nhau.
+
+### 4. `!==` (Strict Inequality)
+- So sánh cả giá trị và kiểu dữ liệu của hai biến.
+- Ví dụ: `5 !== '5'` trả về `true` vì kiểu dữ liệu của chúng khác nhau (`number` và `string`).
