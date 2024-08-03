@@ -7,10 +7,10 @@ Nếu hằng số = 0: “Giá trị bạn nhập là số 0”
 */
 
 const x = 8;
-if (x>0){
-    console.log("Giá trị bạn nhập là số dương");
-} else if (x<0) {
-    console.log("Giá trị bạn nhập là số âm");
+if (x > 0) {
+  console.log("Giá trị bạn nhập là số dương");
+} else if (x < 0) {
+  console.log("Giá trị bạn nhập là số âm");
 } else {
-    console.log("Giá trị bạn nhập là số 0");
+  console.log("Giá trị bạn nhập là số 0");
 }

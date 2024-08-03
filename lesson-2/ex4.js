@@ -11,8 +11,11 @@ Cân nặng tối thiểu là: 70 x 8 :10 = 56 kg
      In ra cân nặng lý tưởng, cân nặng tối đa, cân nặng tối thiểu trên cùng một dòng.*/
 
 let myHeight = 155;
-let x = myHeight%100; //Cân nặng tối đa
-let BMI = (x*9)/10; // Cân nặng lý tưởng
-let y = (x*8)/10; // Cân nặng tối thiểu
-console.log(" Cân nặng lý tưởng ", BMI, "cm","Cân nặng tối đa", x,"kg", "Cân nặng tối thiểu",y,"kg"  );
-
+let maxWeight = myHeight % 100; //Cân nặng tối đa
+let BMI = (maxWeight * 9) / 10; // Cân nặng lý tưởng
+let y = (maxWeight * 8) / 10; // Cân nặng tối thiểu
+console.log(
+  " Cân nặng lý tưởng " + BMI + "cm",
+  "Cân nặng tối đa " + maxWeight + "kg",
+  "Cân nặng tối thiểu " + y + "kg"
+);
