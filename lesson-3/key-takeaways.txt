@@ -52,6 +52,11 @@ Step 4: Gõ “:wq” -> write and quit
 - Hợp nhất nhánh: `git merge branch-name`
 - Xóa nhánh: `git branch -d branch-name`
 
+### 4. Checkout về một revision bất kì
+1. Sử dụng lệnh `git log` để thấy được danh sách các commit 
+2. Để trở về revision (hay hiểu đơn giản là đi về thời điểm quá khứ xem lúc ấy code của mình có gì), ta dùng lệnh git checkout <revision>
+`git checkout 070745d6c000d2a90740dcf97ee5db3f9418cc1f`
+
 ## JavaScript
 
 ### 1. Conventions
@@ -90,7 +95,9 @@ const product = {
   “manufacturer”: {
     “name”: “Acer”,
     “year”: 2024
-  }```
+  }
+}
+  ```
 *Sử dụng:* 
 ```console.log("name = " + user.name);
 console.log("manufacturer name = " + product.manufacturer.name);
